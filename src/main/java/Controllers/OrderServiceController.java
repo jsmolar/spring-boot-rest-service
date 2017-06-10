@@ -16,11 +16,28 @@ public class OrderServiceController {
     @RequestMapping(value = "/order", method = RequestMethod.POST)
     public String orderService(@RequestBody ServiceOrder input){
 
-        if(input.getVolume() > 1000){
-            return "abort";
-        }
+        String service = input.getService();
+        double volume = input.getVolume();
 
-        return "success";
+        switch(service){
+            case "pizza":
+                return "Success: " + volume + " pizza will be delivered";
+            case "party hat":
+                if(volume > 1000){
+                    return "Fail: Out of stock";
+                } else {
+                    return "Success: " + volume + " party hats will be delivered";
+                }
+            case "beer":
+                if(volume > 500){
+                    return "Fail: Out of stock";
+                } else {
+                    return "Success: " + volume + " beers will be delivered";
+                }
+            default:
+                return "Fail: service does not found";
+
+        }
     }
 
 }
