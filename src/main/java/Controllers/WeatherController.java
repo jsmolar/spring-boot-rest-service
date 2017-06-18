@@ -41,7 +41,7 @@ public class WeatherController {
         model.addAttribute("humidity", weather.getHumidity());
         model.addAttribute("description", weather.getDescription());
         //        return "Temperature: " + String.valueOf(weather.getTemperature()) + "°C \n Humidity: " + weather.getHumidity() + "% \n Description: " + weather.getDescription();
-        return "/weather";
+        return "weather";
     }
 
 
