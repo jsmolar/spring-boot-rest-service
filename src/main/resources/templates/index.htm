@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en" class=" js cssgradients csstransforms csstransitions svg inlinesvg svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Weather Service</title>
+
+		<!-- Loading third party fonts -->
+		<link href="./assets/css" rel="stylesheet" type="text/css">
+		<link href="./assets/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="./assets/style.css">
+		
+
+	</head>
+
+
+	<body>
+		
+		<div class="site-content">
+			 <!-- .site-header -->
+
+			
+			<div class="forecast-table" style="
+    margin-top: 150px;
+">
+				<div class="container">
+					<div class="forecast-container">
+						<div class="today forecast">
+							<div class="forecast-content">
+								<div class="location">Brno, CZ</div>
+								<div class="degree">
+									<div class="num"><span  th:text="${temperature}"></span><sup>o</sup>C</div>
+									<div class="forecast-icon">
+										<img src="./assets/icon-1.svg" alt="" width="90">
+									</div>	
+								</div>
+								<span><img src="./assets/icon-umberella.png" alt="" th:text="${humidity}"></span>
+                <span th:text="${description}"></span>
+							</div>
+						</div>
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+			 <!-- .main-content -->
+
+			 <!-- .site-footer -->
+		</div>
+		
+		<script src="./assets/jquery-1.11.1.min.js"></script>
+		<script src="./assets/plugins.js"></script>
+		<script src="./assets/app.js"></script>
+		
+	
+
+</body></html>
