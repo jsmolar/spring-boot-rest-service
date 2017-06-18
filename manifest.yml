@@ -1,0 +1,6 @@
+applications:
+   - name: spring-service
+     host: springServiceHost
+     path: target/spring-boot-rest-service-1.0-SNAPSHOT.jar
+     memory: 512M
+     instances: 1
