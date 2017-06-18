@@ -1,15 +1,15 @@
 package Controllers;
 
 import Entity.Weather;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by jsmolar on 6/16/17.
  */
-@RestController
+@Controller
 @RequestMapping("/weather")
 public class WeatherController {
 
@@ -18,10 +18,11 @@ public class WeatherController {
     @RequestMapping(method = RequestMethod.GET)
     public String getWeather(){
         if(weather == null){
-            return "No weather data";
+            return "weather";
         }
 
-        return String.valueOf(weather.getTemperature()) + "°C";
+        //return "Temperature: " + String.valueOf(weather.getTemperature()) + "°C \n Humidity: " + weather.getHumidity() + "% \n Description: " + weather.getDescription();
+        return "weather";
     }
 
     @RequestMapping(value = "/sendValue", method = RequestMethod.POST)
